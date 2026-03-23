@@ -29,6 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${jost.variable} scroll-smooth`}>
+      <head>
+        <link rel="preconnect" href="https://bookingengine.stayflexi.com" />
+        <link rel="dns-prefetch" href="https://bookingengine.stayflexi.com" />
+      </head>
       <body className="min-h-screen flex flex-col antialiased">
         <Navbar />
         <main className="flex-grow flex flex-col relative">
