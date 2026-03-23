@@ -12,21 +12,21 @@ const experiences = [
     description: "The most famous trek in the valley starts right near our property. Hike up through dense pine forests to reach the natural hot springs of Kheerganga, sacred to Lord Shiva. We provide packed lunches and can arrange reliable local guides.",
     difficulty: "Moderate",
     duration: "6-7 Hours (Round trip)",
-    image: "https://images.unsplash.com/photo-1596707328670-4d437648fbc2?q=80&w=2072&auto=format&fit=crop"
+    image: "/images/THT_Photos/Deodar/SUM04006.jpg"
   },
   {
     title: "Bunbuni Pass Trek",
     description: "A hidden gem that most tourists overlook. Experience completely untouched meadows, incredible views of the glacier, and absolute silence. This is a steeper, more challenging route without any cafes along the way. Guide strongly recommended.",
     difficulty: "Hard",
     duration: "8-9 Hours",
-    image: "https://images.unsplash.com/photo-1614088921867-0c75ccacfa4f?q=80&w=2070&auto=format&fit=crop"
+    image: "/images/THT_Photos/Deodar/SUM04017.jpg"
   },
   {
     title: "Kasol & Manikaran Day Trip",
     description: "Take a short hike down to Barshaini and hop on a local bus or cab to visit the bustling cafes of Kasol or the sacred hot springs and Gurudwara at Manikaran. A perfect recovery day activity.",
     difficulty: "Easy",
     duration: "Half Day",
-    image: "https://images.unsplash.com/photo-1583094892415-0b0ad836cb1d?q=80&w=2070&auto=format&fit=crop"
+    image: "/images/THT_Photos/Apple_Cottage/SUM04187.jpg"
   }
 ];
 

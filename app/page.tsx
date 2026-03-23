@@ -11,8 +11,8 @@ export default function Home() {
       <section className="relative min-h-[90vh] flex flex-col justify-center items-center text-center px-4 bg-forest text-cream overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40">
           <Image 
-            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop"
-            alt="Parvati Valley Mountains"
+            src="/images/THT_Photos/Apple_Cottage/SUM04131.jpg"
+            alt="The Hidden Treasure - Apple Cottage Exterior"
             fill
             className="object-cover"
             priority

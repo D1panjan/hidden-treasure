@@ -10,7 +10,7 @@ const rooms = [
     description: "Cozy handcrafted wooden room with a queen bed and stunning mountain views from the window. Perfect for couples or solo travellers looking for a warm basecamp.",
     price: "₹2,500",
     amenities: ["Mountain View", "Free Wi-Fi", "Daily Housekeeping", "Hot Water 24/7", "Blackout Curtains"],
-    image: "https://images.unsplash.com/photo-1598928506311-c55dd580e55c?q=80&w=2070&auto=format&fit=crop"
+    image: "/images/THT_Photos/Deodar/SUM03971.jpg"
   },
   {
     name: "Wooden Chalet",
@@ -18,7 +18,7 @@ const rooms = [
     description: "A spacious chalet-style room built entirely from local wood. Accommodates families with extra floor bedding available. Panoramic mountain views from every angle.",
     price: "₹3,500",
     amenities: ["Mountain View", "Free Wi-Fi", "Extra Bedding Available", "Daily Housekeeping", "Blackout Curtains", "Laundry Service"],
-    image: "https://images.unsplash.com/photo-1522771731550-b43bd5123d5e?q=80&w=2071&auto=format&fit=crop"
+    image: "/images/THT_Photos/Deodar/SUM03980.jpg"
   },
   {
     name: "Wooden Cabin with Balcony",
@@ -26,7 +26,7 @@ const rooms = [
     description: "Our finest offering — a two-bedroom wooden cabin with a private sit-out balcony overlooking the apple orchards and the valley. Total privacy and maximum comfort.",
     price: "₹4,500",
     amenities: ["Private Balcony", "Mountain & Orchard View", "2 Bedrooms", "Free Wi-Fi", "Daily Housekeeping", "Blackout Curtains", "Laundry Service"],
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
+    image: "/images/THT_Photos/Apple_Cottage/SUM04129.jpg"
   }
 ];
 
