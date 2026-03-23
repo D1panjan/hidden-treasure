@@ -32,6 +32,10 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://bookingengine.stayflexi.com" />
         <link rel="dns-prefetch" href="https://bookingengine.stayflexi.com" />
+        <link rel="preconnect" href="https://maps.google.com" />
+        <link rel="preconnect" href="https://maps.gstatic.com" />
+        <link rel="dns-prefetch" href="https://maps.google.com" />
+        <link rel="dns-prefetch" href="https://maps.gstatic.com" />
       </head>
       <body className="min-h-screen flex flex-col antialiased">
         <Navbar />

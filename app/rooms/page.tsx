@@ -1,33 +1,60 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { Check } from "lucide-react";
 
+export const metadata = {
+  title: "Our Rooms | The Hidden Treasure",
+  description: "Traditional Himachali woodwork meets modern comfort. Explore our cottages, wooden rooms, and tranquil retreats in Kalga.",
+};
+
 const rooms = [
   {
-    name: "Wooden Double King",
-    size: "27 m² · Queen Bed · Up to 3 Guests",
-    description: "Cozy handcrafted wooden room with a queen bed and stunning mountain views from the window. Perfect for couples or solo travellers looking for a warm basecamp.",
-    price: "₹2,500",
-    amenities: ["Mountain View", "Free Wi-Fi", "Daily Housekeeping", "Hot Water 24/7", "Blackout Curtains"],
-    image: "/images/THT_Photos/Deodar/SUM03971.jpg"
+    name: "Khanoor",
+    size: "20 m² · Queen Bed · Up to 3 Guests",
+    description: "Khanoor Room is a comfortable, well-furnished space ideal for short stays, offering privacy, convenience, and a peaceful ambiance.",
+    price: "₹1,000",
+    amenities: ["Mountain View", "Shared Bathroom", "Heating", "Hardwood Floors", "Free Wi-Fi", "Daily Housekeeping"],
+    image: "/images/rooms/khanoor_1.jpg"
   },
   {
-    name: "Wooden Chalet",
-    size: "28 m² · Queen Bed · Up to 4 Guests",
-    description: "A spacious chalet-style room built entirely from local wood. Accommodates families with extra floor bedding available. Panoramic mountain views from every angle.",
-    price: "₹3,500",
-    amenities: ["Mountain View", "Free Wi-Fi", "Extra Bedding Available", "Daily Housekeeping", "Blackout Curtains", "Laundry Service"],
-    image: "/images/THT_Photos/Deodar/SUM03980.jpg"
+    name: "Mohru",
+    size: "24 m² · Queen Bed · Up to 3 Guests",
+    description: "A tranquil wooden room offering a blend of rustic charm and modern comfort, perfect for those seeking peace and scenic views.",
+    price: "₹2,000",
+    amenities: ["Mountain View", "Private Bathroom", "Balcony", "Private Entrance", "Fire Pit Access", "Electric Blankets"],
+    image: "/images/rooms/mohru_1.jpg"
   },
   {
-    name: "Wooden Cabin with Balcony",
-    size: "30 m² · Queen Bed · 2 Bedrooms · Up to 4 Guests",
-    description: "Our finest offering — a two-bedroom wooden cabin with a private sit-out balcony overlooking the apple orchards and the valley. Total privacy and maximum comfort.",
-    price: "₹4,500",
-    amenities: ["Private Balcony", "Mountain & Orchard View", "2 Bedrooms", "Free Wi-Fi", "Daily Housekeeping", "Blackout Curtains", "Laundry Service"],
-    image: "/images/THT_Photos/Apple_Cottage/SUM04129.jpg"
+    name: "Deodar",
+    size: "26 m² · King Bed · Up to 3 Guests",
+    description: "The Deodar Room is a cozy, elegantly designed space featuring wooden accents, serene views, and modern amenities for a relaxing stay.",
+    price: "₹2,200",
+    amenities: ["Mountain View", "Private Bathroom", "King Bed", "Hardwood Floors", "Electric Blankets", "Daily Housekeeping"],
+    image: "/images/rooms/deodar_1.jpg"
+  },
+  {
+    name: "Apple Cottage",
+    size: "38 m² · King Bed · Up to 4 Guests",
+    description: "Apple Cottage is a charming, private retreat nestled among apple orchards, offering rustic elegance, scenic views, and a peaceful atmosphere.",
+    price: "₹4,000",
+    amenities: ["Orchard View", "Private Entrance", "Balcony", "Fire Pit", "Outdoor Dining Area", "Large Living Space"],
+    image: "/images/rooms/apple_cottage_1.jpg"
+  },
+  {
+    name: "Walnut Cottage",
+    size: "48 m² · 2 Queen Beds · Up to 5 Guests",
+    description: "Walnut Cottage is a warm, inviting space surrounded by walnut trees, featuring cozy interiors, natural charm, and serene mountain views.",
+    price: "₹5,000",
+    amenities: ["Mountain View", "Fireplace", "Interconnecting Rooms", "Outdoor Furniture", "Wardrobe", "Dining Area"],
+    image: "/images/rooms/walnut_cottage_1.jpg"
+  },
+  {
+    name: "Kayal",
+    size: "24 m² · Queen Bed · Up to 4 Guests",
+    description: "The Kayal Room offers a tranquil retreat with serene mountain views, tasteful décor, and all the essentials for a comfortable stay.",
+    price: "₹3,200",
+    amenities: ["Mountain View", "Private Bathroom", "Hardwood Floors", "Sofa", "Fire Pit Access", "Daily Housekeeping"],
+    image: "/images/rooms/kayal_1.jpg"
   }
 ];
 
@@ -51,6 +78,8 @@ export default function RoomsPage() {
                   alt={room.name}
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  priority={idx === 0}
                 />
               </div>
               <div className="p-8 md:p-10 flex flex-col justify-center w-full md:w-3/5">
