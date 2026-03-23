@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { Check } from "lucide-react";
 
@@ -78,12 +79,12 @@ export default function RoomsPage() {
                 </div>
 
                 <div>
-                  <a 
-                    href="#availability-checker"
+                  <Link 
+                    href="/booking"
                     className="inline-block px-8 py-3 bg-forest hover:bg-forest-light text-cream font-medium rounded-sm transition-colors"
                   >
                     Check Availability
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -91,53 +92,18 @@ export default function RoomsPage() {
         </div>
 
         {/* Availability Checker Form */}
-        <div id="availability-checker" className="bg-forest text-cream p-8 md:p-12 rounded-sm shadow-xl max-w-4xl mx-auto -mb-24 relative z-10">
-          <h2 className="font-heading text-3xl md:text-4xl text-gold mb-8 text-center">Check Dates</h2>
+        <div id="availability-checker" className="bg-forest text-cream p-12 md:p-16 rounded-sm shadow-xl max-w-4xl mx-auto -mb-24 relative z-10 text-center">
+          <h2 className="font-heading text-4xl md:text-5xl text-gold mb-6">Ready to Book?</h2>
+          <p className="text-xl text-cream/80 mb-10 max-w-2xl mx-auto font-light">
+            Check live availability for all our wooden rooms and cabins using our integrated booking engine.
+          </p>
           
-          <form 
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("Availability checking will be connected to StayFlexi API soon.");
-            }}
-            className="grid grid-cols-1 md:grid-cols-4 gap-6 items-end"
+          <Link 
+            href="/booking"
+            className="inline-block bg-gold hover:bg-gold-light text-forest font-bold py-5 px-12 rounded-sm transition-all transform hover:-translate-y-1 shadow-xl text-xl"
           >
-            <div className="flex flex-col gap-2">
-              <label htmlFor="checkin" className="text-sm font-medium tracking-wide uppercase">Check-in</label>
-              <input 
-                type="date" 
-                id="checkin" 
-                required
-                className="w-full bg-cream text-forest px-4 py-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-gold"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="checkout" className="text-sm font-medium tracking-wide uppercase">Check-out</label>
-              <input 
-                type="date" 
-                id="checkout" 
-                required
-                className="w-full bg-cream text-forest px-4 py-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-gold"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="guests" className="text-sm font-medium tracking-wide uppercase">Guests</label>
-              <select 
-                id="guests" 
-                className="w-full bg-cream text-forest px-4 py-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-gold"
-              >
-                <option value="1">1 Guest</option>
-                <option value="2">2 Guests</option>
-                <option value="3">3 Guests</option>
-                <option value="4">4 Guests</option>
-              </select>
-            </div>
-            <button 
-              type="submit"
-              className="w-full bg-gold hover:bg-gold-light text-forest font-bold py-3 px-4 rounded-sm transition-colors text-center shadow-lg"
-            >
-              Check
-            </button>
-          </form>
+            Open Booking Engine
+          </Link>
         </div>
       </div>
       

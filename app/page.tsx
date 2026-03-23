@@ -29,7 +29,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
             <Link 
-              href="/rooms"
+              href="/booking"
               className="px-8 py-4 bg-gold hover:bg-gold-light text-forest font-semibold rounded-sm transition-all transform hover:-translate-y-1 shadow-lg text-center tracking-wide"
             >
               Book a Stay
@@ -216,7 +216,7 @@ export default function Home() {
             Check our availability and reserve your spot in Kalga.
           </p>
           <Link 
-            href="/rooms"
+            href="/booking"
             className="inline-block px-10 py-5 bg-gold hover:bg-gold-light text-forest font-bold text-lg rounded-sm transition-all transform hover:-translate-y-1 shadow-xl"
           >
             Book Now

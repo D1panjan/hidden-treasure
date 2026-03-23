@@ -34,7 +34,7 @@ export default function Navbar() {
               Contact
             </Link>
             <Link
-              href="/rooms"
+              href="/booking"
               className="bg-forest hover:bg-forest-light text-cream px-6 py-2.5 rounded-sm transition-colors uppercase tracking-wide text-sm font-medium"
             >
               Book Now
@@ -87,7 +87,7 @@ export default function Navbar() {
               Contact
             </Link>
             <Link
-              href="/rooms"
+              href="/booking"
               className="block w-full text-center mt-4 bg-forest text-cream px-3 py-3 rounded-sm font-medium"
               onClick={() => setIsOpen(false)}
             >

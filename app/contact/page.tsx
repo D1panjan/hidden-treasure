@@ -166,9 +166,9 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-forest text-lg">Call or WhatsApp</h4>
-                    <p className="text-text-muted mt-1">+91 85271 70999</p>
+                    <p className="text-text-muted mt-1">+91 89200 18563</p>
                     <a 
-                      href="https://wa.me/918527170999"
+                      href="https://wa.me/918920018563"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gold font-medium mt-2 inline-block hover:underline"
@@ -184,7 +184,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-forest text-lg">Email Us</h4>
-                    <p className="text-text-muted mt-1">hello@thehiddentreasure.in</p>
+                    <p className="text-text-muted mt-1">thehiddentreasure16@gmail.com</p>
                   </div>
                 </div>
 

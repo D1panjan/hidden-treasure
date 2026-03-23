@@ -9,7 +9,7 @@ real bookings. Not a demo or portfolio toy.
 ## The business
 - Hotel name: The Hidden Treasure
 - Location: Kalga, Parvati Valley, HP 175105
-- Phone: +91 85271 70999
+- Phone: +91 89200 18563
 - Google Maps listing: "The Wilstor" in Kalga
 - Google rating: 4.6 stars, 544 reviews
 - Altitude: ~2300m, near Kheerganga trek trail
