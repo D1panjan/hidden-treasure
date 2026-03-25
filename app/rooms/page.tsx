@@ -2,11 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Check } from "lucide-react";
 
-export const metadata = {
-  title: "Our Rooms | The Hidden Treasure",
-  description: "Traditional Himachali woodwork meets modern comfort. Explore our cottages, wooden rooms, and tranquil retreats in Kalga.",
-};
-
 const rooms = [
   {
     name: "Khanoor",

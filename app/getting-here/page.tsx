@@ -60,8 +60,8 @@ export default function GettingHerePage() {
                   <MapIcon size={16} />
                 </div>
                 <div className="ml-6 bg-white p-6 rounded-sm shadow-sm border border-gold/10 flex-1 transition-transform group-hover:-translate-y-1">
-                  <h3 className="font-heading text-2xl text-forest mb-2">Arrive at The Wilstor</h3>
-                  <p className="text-text-muted">Ask any local for "The Wilstor" or "Hidden Treasure". We are located in the center of the village.</p>
+                  <h3 className="font-heading text-2xl text-forest mb-2">Arrive at The Villster</h3>
+                  <p className="text-text-muted">Ask any local for "The Villster" or "Hidden Treasure". We are located in the center of the village.</p>
                 </div>
               </div>
 

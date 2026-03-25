@@ -1,7 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Cloud, Sun, CloudRain, Snowflake, ThermometerSun } from "lucide-react";
+import { useEffect, useState, useCallback } from "react";
+import {
+  Cloud,
+  Sun,
+  CloudRain,
+  Snowflake,
+  ThermometerSun,
+} from "lucide-react";
 
 type WeatherData = {
   currentTemp: number;
@@ -9,28 +15,51 @@ type WeatherData = {
   isDay: boolean;
 };
 
+/** Maximum number of retry attempts before giving up */
+const MAX_RETRIES = 3;
+
+/** Base delay between retries in ms — doubles each attempt */
+const RETRY_DELAY_MS = 2000;
+
+/**
+ * WeatherStrip component that fetches live weather for Kalga.
+ * Includes automatic retry with exponential backoff on failure.
+ */
 export default function WeatherStrip() {
   const [data, setData] = useState<WeatherData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  useEffect(() => {
-    async function fetchWeather() {
-      try {
-        const res = await fetch("/api/weather");
-        if (!res.ok) throw new Error("Failed to fetch");
-        const json = await res.json();
-        setData(json);
-      } catch (err) {
-        console.error(err);
-        setError(true);
-      } finally {
+  /** Fetches weather data with retry logic */
+  const fetchWeather = useCallback(async (attempt: number = 1) => {
+    try {
+      const res = await fetch("/api/weather");
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json();
+      setData(json);
+      setError(false);
+    } catch (err) {
+      console.error(`Weather fetch attempt ${attempt} failed:`, err);
+
+      if (attempt < MAX_RETRIES) {
+        // Exponential backoff: 2s, 4s, 8s
+        const delay = RETRY_DELAY_MS * Math.pow(2, attempt - 1);
+        setTimeout(() => fetchWeather(attempt + 1), delay);
+        return;
+      }
+
+      // All retries exhausted
+      setError(true);
+    } finally {
+      if (attempt === 1) {
         setLoading(false);
       }
     }
-
-    fetchWeather();
   }, []);
+
+  useEffect(() => {
+    fetchWeather();
+  }, [fetchWeather]);
 
   if (error) {
     return (
@@ -48,12 +77,17 @@ export default function WeatherStrip() {
     );
   }
 
+  /** Returns the appropriate weather icon based on the condition string */
   const getIcon = () => {
     const cond = data.condition.toLowerCase();
-    if (cond.includes("rain") || cond.includes("drizzle")) return <CloudRain size={16} className="mr-2" />;
-    if (cond.includes("snow")) return <Snowflake size={16} className="mr-2" />;
-    if (cond.includes("cloud")) return <Cloud size={16} className="mr-2" />;
-    if (cond.includes("clear") || cond.includes("sun")) return <Sun size={16} className="mr-2 text-gold" />;
+    if (cond.includes("rain") || cond.includes("drizzle"))
+      return <CloudRain size={16} className="mr-2" />;
+    if (cond.includes("snow"))
+      return <Snowflake size={16} className="mr-2" />;
+    if (cond.includes("cloud"))
+      return <Cloud size={16} className="mr-2" />;
+    if (cond.includes("clear") || cond.includes("sun"))
+      return <Sun size={16} className="mr-2 text-gold" />;
     return <ThermometerSun size={16} className="mr-2" />;
   };
 

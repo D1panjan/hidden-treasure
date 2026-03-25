@@ -55,7 +55,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-cream/80 hover:text-white transition-colors"
                 >
-                  "The Wilstor", Kalga Village,<br />
+                  "The Villster", Kalga Village,<br />
                   Parvati Valley, Himachal Pradesh 175105
                 </a>
               </li>
@@ -77,7 +77,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-forest-light text-center text-sm text-cream/60 flex flex-col md:flex-row justify-between items-center">
-          <p>&copy; {new Date().getFullYear()} The Hidden Treasure. All rights reserved.</p>
+          <p>&copy; 2025 The Hidden Treasure. All rights reserved.</p>
           <div className="mt-4 md:mt-0 space-x-4">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
