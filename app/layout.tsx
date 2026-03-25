@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BookingWidget from "@/components/BookingWidget";
 import ErrorBoundary from "@/components/ErrorBoundary";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const cormorant = Cormorant_Garamond({
   weight: ["400", "500", "600", "700"],
@@ -144,6 +146,8 @@ export default function RootLayout({
         </main>
         <Footer />
         <BookingWidget />
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

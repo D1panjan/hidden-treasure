@@ -21,6 +21,7 @@ real bookings. Not a demo or portfolio toy.
 - Framework: Next.js (App Router, TypeScript)
 - Styling: Tailwind CSS v4
 - Hosting: Vercel (frontend + API routes)
+- Analytics: Vercel Web Analytics + Vercel Speed Insights
 - Domain: Hostinger (DNS only)
 - Booking engine: StayFlexi (embedded booking widget, hotel ID: 31225)
 - Payment gateway: Handled by StayFlexi booking widget (Razorpay integrated within StayFlexi)
@@ -55,6 +56,7 @@ External APIs (Open-Meteo for weather, StayFlexi for rooms, Resend for email)
 - All external API calls go through lib/apiClient.ts (retry + logging)
 - Rate limiting on all public API endpoints via lib/rateLimit.ts
 - Structured JSON logging via lib/logger.ts for Vercel log aggregation
+- Observability: Vercel Web Analytics and Speed Insights for performance monitoring
 - React ErrorBoundary wraps all page content for graceful error handling
 
 ## Key pages
